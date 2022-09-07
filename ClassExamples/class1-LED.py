@@ -30,3 +30,18 @@ while (time.monotonic() - startTime) < secondsToBlink:
     led.value = False
     time.sleep(0.5)
     print("  time - %0.1f" % time.monotonic())
+
+
+'''
+----in interaction mode of python-----
+>>>import digitalio
+>>> import board
+>>> led = digitalio.DigitalInOut(board.LED)
+>>> dir(led)
+['__class__', '__enter__', '__exit__', 'value', 'deinit', 'direction', 'pull', 'switch_to_input', 'switch_to_output']
+>>> help(led.direction)
+object digitalio.Direction.INPUT is of type Direction
+  INPUT -- digitalio.Direction.INPUT
+  OUTPUT -- digitalio.Direction.OUTPUT
+>>>help(led.*anything*)
+'''

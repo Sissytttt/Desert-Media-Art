@@ -22,7 +22,7 @@ r = 0;
 g = 0;
 b = 0;
 
-# brighter
+# the sky is becoming brighter
 while r<150 and g<150 and b<150:
     led[0] = (r, g, b)
     r+=1
@@ -30,7 +30,7 @@ while r<150 and g<150 and b<150:
     b+=1
     time.sleep(0.05)
     
-# 
+# the sun is rising
 print("red")
 led.brightness = 0.2
 while r<255 and g>54 and b>20:
@@ -41,6 +41,7 @@ while r<255 and g>54 and b>20:
     time.sleep(0.05)
 print(r, g, b)
 
+# golden glow of the sun
 print("yellow")
 while g<166:
     led[0] = (r, g, b)
@@ -79,6 +80,7 @@ print(r, g, b)
 
 '''
 
+# the sky is turing dark (cloudy)
 print("dark")
 while g > 100 and b > 120:
     led[0] = (r, g, b)
@@ -95,6 +97,7 @@ while r>40:
     time.sleep(0.1)
 print(r, g, b)
 
+# the storm begins
 # ligntning
 # use random function to create random flash
 print("flash")
@@ -104,8 +107,9 @@ while r>0:
     g -= 1
     b -= 2
     x = random.random()
+    # strong flash with a light flash follows
     if x<0.1:
-        led.brightness = 0.2
+        led.brightness = 0.4
         led[0] = (255,255,255)
         time.sleep(0.1)
         led[0] = (0, 0, 0)
@@ -113,10 +117,12 @@ while r>0:
         led.brigtness = 0.1
         led[0] = (255,255,255)
         time.sleep(0.1)
+    # medium long flash
     elif x<0.2:
         led.brightness = 0.3
         led[0] = (255,255,255)
-        time.sleep(0.2);
+        time.sleep(0.3);
+    # weak short flash
     elif x<0.3:
         led.brightness = 0.2
         led[0] = (255,255,255)

@@ -95,6 +95,8 @@ while r>40:
     time.sleep(0.1)
 print(r, g, b)
 
+# ligntning
+# use random function to create random flash
 print("flash")
 while r>0:
     led[0] = (r, g, b)
@@ -125,6 +127,8 @@ print(r, g, b)
 
 print("police")
 
+
+# the polic light for 7 seconds
 startT = time.monotonic()
 while (time.monotonic() - startT) < 7:
     led[0] = (255,0,0)

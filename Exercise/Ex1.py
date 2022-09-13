@@ -131,13 +131,15 @@ while r>0:
         time.sleep(0.3)
 print(r, g, b)
 
+
 print("police")
-
-
 # the polic light for 7 seconds
+# the frequncy gets higher and higher, because I think the high frequncy can create a sense of tension
 startT = time.monotonic()
+sleeptime = 0.6
 while (time.monotonic() - startT) < 7:
     led[0] = (255,0,0)
-    time.sleep(0.5)
+    time.sleep(sleeptime)
     led[0] = (0,0,255)
-    time.sleep(0.5)
+    time.sleep(sleeptime)
+    sleeptime -= 0.05
